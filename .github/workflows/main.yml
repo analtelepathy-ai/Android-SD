@@ -54,13 +54,12 @@ jobs:
 
       - name: Package
         run: |
-          cd build-android
           mkdir -p artifact
-          cp bin/sd-cli bin/sd-server artifact/
+          cp build-android/bin/sd-cli build-android/bin/sd-server artifact/
           chmod +x artifact/*
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: sd-android-ndk
-          path: build-android/artifact/ new repository will be created as Android-SD. 
+          path: artifact/
