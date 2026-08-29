@@ -28,7 +28,6 @@ jobs:
           ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
         run: |
           echo "NDK path: $ANDROID_NDK_HOME"
-          ls $ANDROID_NDK_HOME/build/cmake/android.toolchain.cmake
           mkdir -p build-android
           cd build-android
           cmake .. -G Ninja \
